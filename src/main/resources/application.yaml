@@ -1,3 +1,21 @@
+server:
+  error:
+    include-stacktrace: never
+    include-exception: false
+
 spring:
   application:
     name: preenWebApi
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    open-in-view: false
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG # Active le détail de la sécurité
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-this-secret-to-a-random-256-bit-key-in-production!!}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
