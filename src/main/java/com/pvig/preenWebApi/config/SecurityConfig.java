@@ -1,6 +1,6 @@
 package com.pvig.preenWebApi.config;
 
-import com.pvig.preenWebApi.security.JwtAuthenticationFilter;
+import com.pvig.preenWebApi.auth.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +37,9 @@ public class SecurityConfig {
         "/swagger-ui/**",
         "/swagger-ui.html",
         "/webjars/**",
-        "/api/auth/**"
+        "/api/auth/**",
+        "/api/auth/refresh",
+        "/api/auth/logout"
     };
 
     @Bean
@@ -66,7 +68,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:5173"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type", "Accept"));
+        config.setAllowedHeaders(List.of("Authorization", "Content-Type", "Accept", "Cookie"));
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

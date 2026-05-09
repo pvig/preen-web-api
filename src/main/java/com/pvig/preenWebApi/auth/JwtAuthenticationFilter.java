@@ -1,6 +1,5 @@
-package com.pvig.preenWebApi.security;
+package com.pvig.preenWebApi.auth;
 
-import com.pvig.preenWebApi.service.JwtService;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

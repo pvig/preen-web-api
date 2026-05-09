@@ -1,4 +1,4 @@
-package com.pvig.preenWebApi.entity;
+package com.pvig.preenWebApi.user;
 
 public enum Role {
     USER, ADMIN

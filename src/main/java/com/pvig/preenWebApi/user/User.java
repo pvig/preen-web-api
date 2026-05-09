@@ -1,4 +1,4 @@
-package com.pvig.preenWebApi.entity;
+package com.pvig.preenWebApi.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;

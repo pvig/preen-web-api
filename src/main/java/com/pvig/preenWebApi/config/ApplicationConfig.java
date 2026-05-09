@@ -1,6 +1,6 @@
 package com.pvig.preenWebApi.config;
 
-import com.pvig.preenWebApi.repository.UserRepository;
+import com.pvig.preenWebApi.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

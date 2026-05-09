@@ -4,13 +4,19 @@ server:
     include-exception: false
 
 spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/preenwebapi}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   application:
     name: preenWebApi
   jackson:
     serialization:
       write-dates-as-timestamps: false
-  jpa:
-    open-in-view: false
 logging:
   level:
     root: INFO
@@ -18,4 +24,6 @@ logging:
 app:
   jwt:
     secret: ${JWT_SECRET:change-this-secret-to-a-random-256-bit-key-in-production!!}
-    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+    expiration-ms: ${JWT_EXPIRATION_MS:900000}
+  refresh-token:
+    expiration-days: ${REFRESH_TOKEN_EXPIRATION_DAYS:7}

@@ -1,8 +1,5 @@
-package com.pvig.preenWebApi.controller;
+package com.pvig.preenWebApi.user;
 
-import com.pvig.preenWebApi.dto.UserProfileDto;
-import com.pvig.preenWebApi.entity.User;
-import com.pvig.preenWebApi.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

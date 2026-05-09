@@ -1,4 +1,4 @@
-package com.pvig.preenWebApi.dto;
+package com.pvig.preenWebApi.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
